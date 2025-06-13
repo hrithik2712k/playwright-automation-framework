@@ -1,0 +1,26 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test_dev": "cross-env ENV_NAME=dev npx playwright test",
+    "test_qa": "cross-env ENV_NAME=qa npx playwright test",
+    "test_dev_hl_cr": "cross-env ENV_NAME=dev npx playwright test --project=chromium",
+    "test_dev_ui": "cross-env ENV_NAME=dev npx playwright test --ui",
+    "test_uat_cr_hd": "cross-env ENV_NAME=dev npx playwright test --project=chromium --headed --grep=@UAT",
+    "test_dev_cr_hd_lf": "cross-env ENV_NAME=dev npx playwright test --project=chromium --last-failed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.30"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.5.0"
+  }
+}
