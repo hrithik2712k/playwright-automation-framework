@@ -1,0 +1,33 @@
+{
+  "content_type": "application/json; charset=utf-8",
+  "booking_id": 1,
+  "booking_id2": 2,
+  "booking_id3": 4,
+  "booking_id4": 5,
+  "firstname": "John",
+  "create_booking": {
+    "firstname": "Hrithik",
+    "lastname": "Bansal",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2018-01-01",
+      "checkout": "2019-01-01"
+    }
+  },
+  "update_booking": {
+    "firstname": "hrithik",
+    "lastname": "baisla",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2018-01-01",
+      "checkout": "2019-01-01"
+    }
+  },
+
+  "partial_update_booking": {
+    "firstname": "john",
+    "lastname": "vince"
+  }
+}

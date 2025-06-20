@@ -8,7 +8,8 @@
     "test_dev_hl_cr": "cross-env ENV_NAME=dev npx playwright test --project=chromium",
     "test_dev_ui": "cross-env ENV_NAME=dev npx playwright test --ui",
     "test_uat_cr_hd": "cross-env ENV_NAME=dev npx playwright test --project=chromium --headed --grep=@UAT",
-    "test_dev_cr_hd_lf": "cross-env ENV_NAME=dev npx playwright test --project=chromium --last-failed"
+    "test_dev_cr_hd_lf": "cross-env ENV_NAME=dev npx playwright test --project=chromium --last-failed",
+    "test_api_dev": "cross-env ENV_NAME=dev npx playwright test --project=apiTest "
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,5 @@
-import { test, expect } from "../fixtures/hooks-fixtures";
-import loginModuleData from "../data/login-module-data.json";
+import { test, expect } from "../../fixtures/hooks-fixtures";
+import loginModuleData from "../../data/ui-data/login-module-data.json";
 
 test.use({
   storageState: {
