@@ -43,7 +43,7 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "retain-on-failure",
-    headless: false,
+    headless: true,
     video: "retain-on-failure",
     screenshot: "only-on-failure",
   },
@@ -60,6 +60,7 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         storageState: "./playwright/.auth/auth.json",
+        headless: true,
       },
     },
 
