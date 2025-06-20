@@ -60,7 +60,6 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         storageState: "./playwright/.auth/auth.json",
-        headless: true,
       },
     },
 
