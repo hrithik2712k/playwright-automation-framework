@@ -11,7 +11,7 @@ test.use({
 test(
   "[login] Verify that the user cannot login with invalid password.",
   { tag: ["@UI", "@UAT"] },
-  async ({ gotoUrl, loginPage, commonUtils }) => {
+  async ({ loginPage, commonUtils }) => {
     const username = commonUtils.decryptData(process.env.USER_NAME!);
     await loginPage.loginOrangeHRM(username, loginModuleData.wrong_password);
     await expect(loginPage.invalidCredentialErrorPopup).toHaveText(
@@ -24,7 +24,7 @@ test(
 test(
   "[login] Verify that the user cannot login with invalid username.",
   { tag: ["@UI", "@UAT"] },
-  async ({ gotoUrl, loginPage, commonUtils }) => {
+  async ({ loginPage, commonUtils }) => {
     const password = commonUtils.decryptData(process.env.PASSWORD!);
     await loginPage.loginOrangeHRM(loginModuleData.wrong_username, password);
     await expect(loginPage.invalidCredentialErrorPopup).toHaveText(
@@ -45,7 +45,7 @@ test(
     },
   },
 
-  async ({ gotoUrl, loginPage, commonUtils }) => {
+  async ({ loginPage }) => {
     await loginPage.loginOrangeHRM(
       loginModuleData.wrong_username,
       loginModuleData.wrong_password
@@ -66,15 +66,9 @@ test(
       description: "",
     },
   },
-  async ({ gotoUrl, commonUtils, loginPage, leftNavigationPage }) => {
+  async ({ commonUtils, loginPage, leftNavigationPage }) => {
     const username = commonUtils.decryptData(process.env.USER_NAME!);
     const password = commonUtils.decryptData(process.env.PASSWORD!);
     await loginPage.loginOrangeHRM(username, password);
-    // await expect(leftNavigationPage.orangeHrmLogo).toHaveScreenshot(
-    //   "OrangeHrmBrandLogo.png"
-    // );
-    // await expect(leftNavigationPage.leftNavigationPanel).toHaveScreenshot(
-    //   "LeftNavPanel.png"
-    // );
   }
 );
